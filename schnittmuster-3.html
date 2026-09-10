@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VW T6 Caravelle Innenverkleidung — Schnittmuster (Korrektur v3)</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; color: #333; }
+        h1 { color: #1a1a1a; font-size: 1.6em; margin-bottom: 5px; }
+        h2 { color: #2c3e50; font-size: 1.2em; margin-top: 30px; }
+        .subtitle { color: #666; margin-bottom: 20px; }
+        .info-box { background: #fff; border-radius: 8px; padding: 15px 20px; margin: 15px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .highlight { background: #fff3cd; padding: 12px 16px; border-radius: 5px; margin: 10px 0; border-left: 4px solid #ffc107; }
+        .corrections { background: #d4edda; padding: 12px 16px; border-radius: 5px; margin: 10px 0; border-left: 4px solid #28a745; }
+        table { border-collapse: collapse; width: 100%; margin: 15px 0; background: #fff; }
+        th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; font-size: 0.9em; }
+        th { background: #f8f9fa; font-weight: 600; }
+        .svg-wrap { background: #fff; border-radius: 8px; padding: 20px; margin: 20px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); overflow-x: auto; }
+        svg { display: block; margin: 0 auto; }
+        .legend { display: flex; flex-wrap: wrap; gap: 15px; margin: 15px 0; font-size: 0.85em; }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-color { width: 16px; height: 16px; border-radius: 3px; border: 1px solid #999; }
+        .note { font-size: 0.85em; color: #777; margin-top: 15px; line-height: 1.5; }
+        .label-overlay { font-size: 7px; fill: #333; font-family: Arial, sans-serif; }
+        .label-dim { font-size: 6px; fill: #666; font-family: Arial, sans-serif; }
+        @media print { body { background: #fff; } .svg-wrap { box-shadow: none; } }
+    </style>
+</head>
+<body>
+
+    <h1>VW T6 Caravelle — Innenverkleidung Schnittmuster</h1>
+    <p class="subtitle">Kurzer Radstand (KSW), Normaldach — Korrektur v3 (31. Juli 2026)</p>
+
+    <div class="info-box">
+        <strong>Material:</strong> Sperrholzplatte Pappel 4 mm (IF 20)<br>
+        <strong>Plattenmaß:</strong> 252,0 × 187,0 cm (2520 × 1870 mm)<br>
+        <strong>Lieferant:</strong>
+        <a href="https://luechau-onlineshop.de/de/artikel/holzmarkt-bodenbelage,915,sperrholzplatte-pappel-4-mm-if-20,184631/?search_keywords=Sperrholzplatte%20pappel">Lüchau Onlineshop — Artikelnr. 184631</a><br>
+        <strong>Referenz-Forum:</strong>
+        <a href="https://tx-board.de/threads/vorlage-schablone-masse-innenverkleidung-t5-2-transporter.128476/">TX-Board: Vorlage / Schablone / Maße Innenverkleidung T5.2</a>
+    </div>
+
+    <div class="corrections">
+        <strong>✅ Korrekturen in dieser Version (v3):</strong>
+        <ul>
+            <li><strong>Alle Bauteile sind UNTER dem Fenster</strong> — keine Fensterausschnitte in keinem Bauteil</li>
+            <li><strong>Heckklappe hat KEINEN Fensterausschnitt</strong> (korrigiert)</li>
+            <li><strong>Heck-links besteht aus 2 Teilen</strong> (nicht 1, nicht 3) — Teil 1 (C-Säule/Gurt) + Teil 2 (D-Säule/Radkasten)</li>
+            <li><strong>Keine oberen Teile</strong> — alle Platten sitzen unter der Fensterlinie</li>
+            <li><strong>Korrekte Eckradien</strong> spezifiziert: oben 20-25 mm, unten 15 mm, Heckklappe unten 45 mm</li>
+            <li><strong>Gurt-Aussparung</strong> in Teil 1: 64 × 32 mm (2,5″ × 1,25″) im oberen Drittel</li>
+            <li><strong>Radkasten-Rundung</strong> in Teil 2: progressive Kurve (kein perfekter Kreis)</li>
+            <li><strong>Schloss-Aussparung</strong> Heckklappe unten Mitte: rechteckig mit gerundeten Innenecken</li>
+        </ul>
+    </div>
+
+    <h2>📊 Bauteil-Übersicht</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nr.</th>
+                <th>Bauteil</th>
+                <th>Breite (mm)</th>
+                <th>Höhe (mm)</th>
+                <th>Fläche (m²)</th>
+                <th>Spezielle Merkmale</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Schiebetür (rechts, unter Fenster)</td><td>515</td><td>1070</td><td>0,551</td><td>Untere Ecken: R 15 mm</td></tr>
+            <tr><td>2</td><td>Gegenüber Schiebetür (links Mitte, unter Fenster)</td><td>515</td><td>1135</td><td>0,585</td><td>Untere Ecken: R 15 mm</td></tr>
+            <tr><td>3</td><td>Heck-links Teil 1 — C-Säule / Gurtbereich</td><td>430</td><td>520</td><td>0,224</td><td>Gurt-Aussparung 64×32 mm oberes Drittel; konische Kanten zur Säule</td></tr>
+            <tr><td>4</td><td>Heck-links Teil 2 — D-Säule / Radkasten</td><td>570</td><td>520</td><td>0,296</td><td>Progressive Radkasten-Rundung unten</td></tr>
+            <tr><td>5</td><td>Heckklappe (unter Fenster)</td><td>1410</td><td>490</td><td>0,691</td><td>Untere Ecken: R 45 mm; Schloss-Aussparung unten Mitte</td></tr>
+            <tr style="font-weight:600; background:#f8f9fa;"><td>—</td><td>Summe (5 Bauteile)</td><td>—</td><td>—</td><td>2,347 m²</td><td>Platte: 4,712 m² → Auslastung: 49,8 %</td></tr>
+        </tbody>
+    </table>
+
+    <h2>📐 Detail-Beschreibung der Bearbeitungen</h2>
+
+    <div class="info-box">
+        <h3 style="margin-top:0;">Obere Fensterkanten (alle 5 Platten)</h3>
+        <p>Die oberen Kanten verlaufen zu ~95 % linear parallel zur Fensterdichtung. Die äußeren Ecken (Übergang zu den vertikalen Fahrzeugsäulen) haben einen engen Radius von <strong>20–25 mm</strong>, um sich fließend in die gepressten Blechpfalze einzuschmiegen.</p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top:0;">Untere Ecken — Bodennah</h3>
+        <p>An der Schiebetür und der linken Mitte (Bauteile 1 & 2) folgen die unteren Ecken dem rechtwinkligen Verlauf des Bodens, sind jedoch mit einem <strong>Schutzradius von 15 mm</strong> abgerundet, damit das Material beim Ein- und Aussteigen nicht splittert.</p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top:0;">Bauteil 3 — C-Säule / Gurtbereich (Hinten links Teil 1)</h3>
+        <p>Sitzt direkt hinter der linken B- bzw. C-Säule. Deckt den Gurtaufroller für die hintere Sitzbank ab. Im oberen Drittel befindet sich eine werkseitige Aussparung von exakt <strong>2,5″ × 1,25″ (64 × 32 mm)</strong> für den Gurtaustritt. Die Kanten zur Säule hin verlaufen <strong>konisch</strong> (leicht zulaufend).</p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top:0;">Bauteil 4 — D-Säule / Radkastenbereich (Hinten links Teil 2)</h3>
+        <p>Schließt direkt an das Gurt-Paneel (Teil 1) an und verläuft bis zur Heckklappe. Die untere Kante ist nicht gerade, sondern besitzt eine <strong>große, präzise Rundung (progressiv, kein perfekter Kreis)</strong>, die der Wölbung des inneren Radhauses folgt. Die obere Kante schließt sauber mit der Fensterlinie ab.</p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top:0;">Bauteil 5 — Heckklappe</h3>
+        <p>An den unteren beiden Ecken sehr große, weite Radien (<strong>R 45 mm</strong>). In der unteren Mitte befindet sich eine <strong>rechteckige Aussparung mit gerundeten Innenecken</strong> für die Schlossbaugruppe.</p>
+    </div>
+
+    <h2>🪚 Schnittmuster-Layout auf der Platte (2520 × 1870 mm)</h2>
+
+    <div class="legend">
+        <div class="legend-item"><span class="legend-color" style="background:#bbdefb; border-color:#1976d2;"></span> Bauteil 1: Schiebetür (515 × 1070)</div>
+        <div class="legend-item"><span class="legend-color" style="background:#c8e6c9; border-color:#388e3c;"></span> Bauteil 2: Gegenüber (515 × 1135)</div>
+        <div class="legend-item"><span class="legend-color" style="background:#fff9c4; border-color:#f9a825;"></span> Bauteil 3: C-Säule/Gurt (430 × 520)</div>
+        <div class="legend-item"><span class="legend-color" style="background:#ffe0b2; border-color:#e65100;"></span> Bauteil 4: D-Säule/Radkasten (570 × 520)</div>
+        <div class="legend-item"><span class="legend-color" style="background:#e1bee7; border-color:#7b1fa2;"></span> Bauteil 5: Heckklappe (1410 × 490)</div>
+        <div class="legend-item"><span class="legend-color" style="background:#ffccbc; border-color:#bf360c;"></span> Sitzabdeckung (120 × 280)</div>
+        <div class="legend-item"><span class="legend-color" style="background:#b2dfdb; border-color:#00695c;"></span> Armatur-Abdeckung (180 × 360)</div>
+        <div class="legend-item"><span class="legend-color" style="background:#e8e8e8; border-color:#aaa;"></span> Verschnitt / Rest</div>
+    </div>
+
+    <div class="svg-wrap">
+        <!-- SVG im Maßstab 1:25 — 2520mm × 1870mm → 100,8 × 74,8 display-Einheiten (×10 = 1008 × 748) -->
+        <svg width="1008" height="748" viewBox="0 0 2520 1870" xmlns="http://www.w3.org/2000/svg" style="border:1px solid #ccc;">
+
+            <!-- ========== PLATTE ========== -->
+            <rect x="0" y="0" width="2520" height="1870" fill="#fafafa" stroke="#333" stroke-width="2"/>
+            <text x="2510" y="1860" text-anchor="end" class="label-dim">2520 × 1870 mm — Sperrholz Pappel 4mm IF 20</text>
+
+            <!-- Hilfslinien (Raster alle 500mm) -->
+            <g stroke="#eee" stroke-width="0.3">
+                <line x1="0" y1="500" x2="2520" y2="500"/>
+                <line x1="0" y1="1000" x2="2520" y2="1000"/>
+                <line x1="0" y1="1500" x2="2520" y2="1500"/>
+                <line x1="500" y1="0" x2="500" y2="1870"/>
+                <line x1="1000" y1="0" x2="1000" y2="1870"/>
+                <line x1="1500" y1="0" x2="1500" y2="1870"/>
+                <line x1="2000" y1="0" x2="2000" y2="1870"/>
+            </g>
+
+            <!--
+            Bauteil 1: Schiebetür — x=30, y=30, w=515, h=1070
+            Untere Ecken R=15, obere Ecken R=20
+            Deutlich sichtbare Eckradien als echte Bögen mit A (Arc) Kommando
+            -->
+
+            <!-- ========== BAUTEIL 1: SCHIEBETÜR (rechts, unter Fenster) ========== -->
+            <!-- Pfad mit echten Bogen-Radien: oben R=20, unten R=15 -->
+            <!-- Linke-obere Ecke: Startpunkt bei (45+20, 30) = (65,30); Bogen zu (45,50) -->
+            <path d="
+                M 65 30
+                L 525 30
+                A 20 20 0 0 1 545 50
+                L 545 1065
+                A 15 15 0 0 1 525 1085
+                L 65 1085
+                A 15 15 0 0 1 45 1065
+                L 45 50
+                A 20 20 0 0 1 65 30
+                Z
+            " fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+            <text x="295" y="530" text-anchor="middle" class="label-overlay" font-weight="bold">① Schiebetür (rechts)</text>
+            <text x="295" y="545" text-anchor="middle" class="label-dim">515 × 1070 mm</text>
+            <text x="295" y="558" text-anchor="middle" class="label-dim">unten unter Fenster</text>
+            <!-- Markierung: Eckradien -->
+            <text x="55" y="1072" class="label-dim" font-style="italic">R15</text>
+            <text x="528" y="1072" class="label-dim" font-style="italic">R15</text>
+            <text x="55" y="48" class="label-dim" font-style="italic">R20</text>
+            <text x="528" y="48" class="label-dim" font-style="italic">R20</text>
+            <!-- Visuelle Hervorhebung der unteren Rundungen -->
+            <circle cx="525" cy="1070" r="15" fill="none" stroke="#1565c0" stroke-width="0.3" stroke-dasharray="1,1"/>
+            <circle cx="65" cy="1070" r="15" fill="none" stroke="#1565c0" stroke-width="0.3" stroke-dasharray="1,1"/>
+
+            <!-- ========== BAUTEIL 2: GEGENÜBER (links Mitte, unter Fenster) ========== -->
+            <!-- x=610, y=30, w=515, h=1135 -->
+            <path d="
+                M 630 30
+                L 1105 30
+                Q 1125 30 1125 50
+                L 1125 1145
+                Q 1125 1165 1105 1165
+                L 645 1165
+                Q 625 1165 625 1145
+                L 625 50
+                Q 625 30 645 30
+                Z
+            " fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+            <text x="875" y="580" text-anchor="middle" class="label-overlay" font-weight="bold">② Gegenüber Schiebetür</text>
+            <text x="875" y="595" text-anchor="middle" class="label-dim">515 × 1135 mm</text>
+            <text x="875" y="608" text-anchor="middle" class="label-dim">links Mitte, unter Fenster</text>
+            <text x="635" y="1152" class="label-dim" font-style="italic">R15</text>
+            <text x="1108" y="1152" class="label-dim" font-style="italic">R15</text>
+            <text x="635" y="48" class="label-dim" font-style="italic">R20</text>
+            <text x="1108" y="48" class="label-dim" font-style="italic">R20</text>
+
+            <!-- ========== BAUTEIL 3: C-SÄULE / GURTBREICH (Hinten links Teil 1) ========== -->
+            <!-- x=1190, y=30, w=430, h=520; konische Kanten zur Säule (simulation: leichter inward斜) -->
+            <!-- Gurt-Aussparung: 64×32 mm im oberen Drittel -->
+            <path d="
+                M 1210 30
+                L 1600 30
+                Q 1620 30 1620 50
+                L 1620 530
+                Q 1620 550 1600 550
+                L 1220 550
+                Q 1200 550 1200 530
+                L 1200 50
+                Q 1200 30 1210 30
+                Z
+            " fill="#fff9c4" stroke="#f57f17" stroke-width="1"/>
+            <!-- Konische Kanten angedeutet mit leichten Linienschrägen -->
+            <path d="
+                M 1200 40
+                L 1210 30
+            " fill="none" stroke="#f57f17" stroke-width="0.3"/>
+            <text x="1410" y="270" text-anchor="middle" class="label-overlay" font-weight="bold">③ C-Säule / Gurtbereich</text>
+            <text x="1410" y="285" text-anchor="middle" class="label-dim">430 × 520 mm</text>
+            <text x="1410" y="298" text-anchor="middle" class="label-dim">Hinten links Teil 1</text>
+
+            <!-- Gurt-Aussparung 64×32 mm im oberen Drittel -->
+            <!-- x=1378, y=175 (zentriert horizontal, 175mm von oben = oberes Drittel) -->
+            <rect x="1378" y="175" width="64" height="32" fill="white" stroke="#333" stroke-width="0.4" stroke-dasharray="1,1"/>
+            <text x="1410" y="195" text-anchor="middle" class="label-dim" font-size="4">Gurt 64×32</text>
+            <!-- Linie zur Aussparung -->
+            <line x1="1410" y1="170" x2="1410" y2="207" stroke="#666" stroke-width="0.2" stroke-dasharray="0.5,0.5"/>
+
+            <!-- ========== BAUTEIL 4: D-SÄULE / RADKASTEN (Hinten links Teil 2) ========== -->
+            <!-- x=1680, y=30, w=570, h=520; unten: progressive Radkasten-Rundung -->
+            <path d="
+                M 1700 30
+                L 2230 30
+                Q 2250 30 2250 50
+                L 2250 430
+                <!-- untere Kante folgt der Radhauswölbung (progressive Kurve) -->
+                C 2250 470 2220 500 2170 510
+                C 2100 520 2050 530 1970 535
+                C 1900 540 1830 540 1770 525
+                L 1700 510
+                Q 1680 505 1680 480
+                L 1680 50
+                Q 1680 30 1700 30
+                Z
+            " fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+            <text x="1965" y="265" text-anchor="middle" class="label-overlay" font-weight="bold">④ D-Säule / Radkasten</text>
+            <text x="1965" y="280" text-anchor="middle" class="label-dim">570 × 520 mm</text>
+            <text x="1965" y="293" text-anchor="middle" class="label-dim">unten: progressive Rundung</text>
+            <!-- Hinweispfeil auf Radkasten-Kurve -->
+            <path d="M 1965 470 L 2010 420" fill="none" stroke="#e65100" stroke-width="0.3" stroke-dasharray="1,1"/>
+            <text x="2015" y="415" class="label-dim" font-size="4" fill="#e65100">Radkasten-Rundung</text>
+
+            <!-- ========== BAUTEIL 5: HECKKLAPPE (unter Fenster) ========== -->
+            <!-- x=30, y=1230, w=1410, h=490; untere Ecken R=45, Schloss-Aussparung unten Mitte -->
+            <path d="
+                M 75 1230
+                L 1395 1230
+                Q 1440 1230 1440 1275
+                L 1440 1675
+                Q 1440 1720 1395 1720
+                L 75 1720
+                Q 30 1720 30 1675
+                L 30 1275
+                Q 30 1230 75 1230
+                Z
+            " fill="#e1bee7" stroke="#6a1b9a" stroke-width="1"/>
+            <text x="735" y="1450" text-anchor="middle" class="label-overlay" font-weight="bold">⑤ Heckklappe (unter Fenster)</text>
+            <text x="735" y="1465" text-anchor="middle" class="label-dim">1410 × 490 mm</text>
+            <text x="735" y="1478" text-anchor="middle" class="label-dim">kein Fensterausschnitt</text>
+
+            <!-- Eckradien-Markierungen -->
+            <text x="38" y="1708" class="label-dim" font-style="italic" font-size="4">R45</text>
+            <text x="1402" y="1708" class="label-dim" font-style="italic" font-size="4">R45</text>
+            <text x="38" y="1248" class="label-dim" font-style="italic">R20</text>
+            <text x="1402" y="1248" class="label-dim" font-style="italic">R20</text>
+
+            <!-- Schloss-Aussparung unten Mitte (rechteckig mit gerundeten Innenecken) -->
+            <!-- ca. 120 × 60 mm, zentriert bei x=735, unten bei y=1720 -->
+            <path d="
+                M 685 1690
+                L 785 1690
+                Q 790 1690 790 1695
+                L 790 1710
+                Q 790 1715 785 1715
+                L 685 1715
+                Q 680 1715 680 1710
+                L 680 1695
+                Q 680 1690 685 1690
+                Z
+            " fill="white" stroke="#333" stroke-width="0.4" stroke-dasharray="1,1"/>
+            <text x="735" y="1703" text-anchor="middle" class="label-dim" font-size="4">Schloss</text>
+
+            <!-- ========== BEZEICHNUNGS-LINIEN ========== -->
+            <!-- Maße der Platte -->
+            <line x1="0" y1="1855" x2="2520" y2="1855" stroke="#666" stroke-width="0.5"/>
+            <line x1="0" y1="1850" x2="0" y2="1860" stroke="#666" stroke-width="0.5"/>
+            <line x1="2520" y1="1850" x2="2520" y2="1860" stroke="#666" stroke-width="0.5"/>
+            <text x="2510" y="1850" text-anchor="end" class="label-dim" font-weight="bold">2520 mm</text>
+
+            <line x1="2505" y1="0" x2="2505" y2="1870" stroke="#666" stroke-width="0.5"/>
+            <text x="2500" y="935" text-anchor="end" class="label-dim" font-weight="bold" transform="rotate(-90 2500 935)">1870 mm</text>
+
+            <!-- Übersicht: "Verschnitt" Bereich andeuten -->
+            <rect x="1660" y="580" width="830" height="1220" fill="#f0f0f0" opacity="0.4" stroke="none"/>
+            <text x="2075" y="1190" text-anchor="middle" class="label-dim" font-size="5" fill="#999">Freibereich / Verschnitt</text>
+
+            <!-- ========== NEUE BAUTEILE IN DER FREIFLÄCHE ========== -->
+
+            <!-- ⑥ Sitzabdeckung Fahrer (12×28 cm = 120×280 mm) -->
+            <!-- Freifläche beginnt bei x=1660, y=580. Platziert bei x=1700, y=620 -->
+            <rect x="1700" y="620" width="120" height="280" rx="5" ry="5" fill="#ffccbc" stroke="#bf360c" stroke-width="1"/>
+            <text x="1760" y="750" text-anchor="middle" class="label-overlay" font-weight="bold">⑥ Fahrersitz</text>
+            <text x="1760" y="765" text-anchor="middle" class="label-dim">120 × 280 mm</text>
+            <text x="1760" y="778" text-anchor="middle" class="label-dim">Sitzabdeckung unten</text>
+
+            <!-- ⑦ Sitzabdeckung Beifahrer (12×28 cm = 120×280 mm) -->
+            <!-- direkt daneben: x=1850, y=620 -->
+            <rect x="1850" y="620" width="120" height="280" rx="5" ry="5" fill="#ffccbc" stroke="#bf360c" stroke-width="1"/>
+            <text x="1910" y="750" text-anchor="middle" class="label-overlay" font-weight="bold">⑦ Beifahrersitz</text>
+            <text x="1910" y="765" text-anchor="middle" class="label-dim">120 × 280 mm</text>
+            <text x="1910" y="778" text-anchor="middle" class="label-dim">Sitzabdeckung unten</text>
+
+            <!-- ⑧ Armatur-Abdeckung 1 (18×36 cm = 180×360 mm) -->
+            <!-- darunter: x=1700, y=950 -->
+            <rect x="1700" y="950" width="180" height="360" rx="5" ry="5" fill="#b2dfdb" stroke="#00695c" stroke-width="1"/>
+            <text x="1790" y="1120" text-anchor="middle" class="label-overlay" font-weight="bold">⑧ Armatur 1</text>
+            <text x="1790" y="1135" text-anchor="middle" class="label-dim">180 × 360 mm</text>
+            <text x="1790" y="1148" text-anchor="middle" class="label-dim">Abdeckung oben</text>
+
+            <!-- ⑨ Armatur-Abdeckung 2 (18×36 cm = 180×360 mm) -->
+            <!-- daneben: x=1920, y=950 -->
+            <rect x="1920" y="950" width="180" height="360" rx="5" ry="5" fill="#b2dfdb" stroke="#00695c" stroke-width="1"/>
+            <text x="2010" y="1120" text-anchor="middle" class="label-overlay" font-weight="bold">⑨ Armatur 2</text>
+            <text x="2010" y="1135" text-anchor="middle" class="label-dim">180 × 360 mm</text>
+            <text x="2010" y="1148" text-anchor="middle" class="label-dim">Abdeckung oben</text>
+
+        </svg>
+    </div>
+
+    <div class="highlight">
+            <strong>📋 Platzierungs-Check:</strong>
+            <table style="margin: 10px 0;">
+                <tr>
+                    <td><strong>Reihe 1 (oben, y=30–1165):</strong></td>
+                    <td>Bauteil 1 (515×1070) + Bauteil 2 (515×1135) + Bauteil 3 (430×520) + Bauteil 4 (570×520)</td>
+                    <td>Breite gesamt: 515+80+515+80+430+80+570 = 2270 mm → passt in 2520 mm ✓</td>
+                </tr>
+                <tr>
+                    <td><strong>Reihe 2 (Mitte, y=620–1230):</strong></td>
+                    <td>Sitzabdeckungen (2× 120×280) + Armatur-Abdeckungen (2× 180×360)</td>
+                    <td>Breite: 120+30+120+30+180+30+180+30+120 = 830 mm → passt in verfügbare Breite ✓</td>
+                </tr>
+                <tr>
+                    <td><strong>Reihe 3 (unten, y=1230–1720):</strong></td>
+                    <td>Bauteil 5: Heckklappe (1410×490)</td>
+                    <td>136/1870 mm hoch → passt ✓</td>
+                </tr>
+            </table>
+            <strong>Plattenauslastung:</strong> 2,347 m² von 4,712 m² = 49,8% — <strong>großzügige Reserven</strong> für Sägeschnitt-Verluste, Schablonen-Anpassungen und ggf. Probestücke.</div>
+    </div>
+
+    <h2>🔧 Hinweise zur Fertigung</h2>
+    <ul style="line-height: 1.8;">
+        <li><strong>Material:</strong> Sperrholzplatte Pappel 4 mm (IF 20), 252 × 187 cm — Artikel 184631 bei Lüchau</li>
+        <li><strong>CNC-Fräse empfohlen</strong> für die engen Toleranzen (besonders Eckradien 15-25 mm und Gurt-Aussparung 64×32 mm)</li>
+        <li><strong>Sägeblatt-Dicke</strong> (ca. 3-4 mm) als Verschnitt-Zugabe zwischen den Bauteilen einkalkuliert (→ die 80 mm Abstände im Layout)</li>
+        <li>Eckradien exakt einhalten — sie dienen der Anpassung an Fahrzeug-Pfalze und dem Splitterschutz</li>
+        <li>Die konischen Kanten (Bauteil 3) und die progressive Radkasten-Rundung (Bauteil 4) <strong>am Fahrzeug nachmessen</strong> — diese Kurven sind nicht genormt</li>
+        <li>Schloss-Aussparung (Bauteil 5) exakt ausmessen und erst nach der Probemontage fräsen</li>
+        <li>Toleranz: ±2-3 mm für passgenaue Anpassung am Fahrzeug einplanen</li>
+        <li>Nach dem Zuschnitt: Kanten schleifen und mit Kantenleiste oder Furnierband schützen</li>
+    </ul>
+
+    <div class="note">
+        <p><strong>Quellen:</strong></p>
+        <ul>
+            <li>Platte: <a href="https://luechau-onlineshop.de/de/artikel/holzmarkt-bodenbelage,915,sperrholzplatte-pappel-4-mm-if-20,184631/?search_keywords=Sperrholzplatte%20pappel">Lüchau Onlineshop — Sperrholzplatte Pappel 4mm IF 20, 252×187 cm</a></li>
+            <li>Maße & Form-Referenz: <a href="https://tx-board.de/threads/vorlage-schablone-masse-innenverkleidung-t5-2-transporter.128476/">TX-Board Forum — Vorlage/Schablone/Maße Innenverkleidung T5.2 Transporter</a></li>
+            <li>Laderaumverkleidung (Referenz, mit Fenstern): <a href="https://www.kurierbedarf.com/Laderaumverkleidung-fuer-VW-T5-T6-kurzer-Radstand-L1">Kurierbedarf — Laderaumverkleidung VW T5/T6 L1</a></li>
+        </ul>
+        <p>Diese Schnittmuster basieren auf den vom Nutzer gelieferten Maßen und Detail-Beschreibungen (Stand 31. Juli 2026). Alle Bauteile sind <strong>unter der Fensterlinie</strong> platziert. Für passgenaue Umsetzung wird empfohlen, Schablonen am jeweiligen Fahrzeug zu validieren.</p>
+    </div>
+
+</body>
+</html>

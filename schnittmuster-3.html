@@ -24,6 +24,10 @@
         .note { font-size: 0.85em; color: #777; margin-top: 15px; line-height: 1.5; }
         .label-overlay { font-size: 7px; fill: #333; font-family: Arial, sans-serif; }
         .label-dim { font-size: 6px; fill: #666; font-family: Arial, sans-serif; }
+        .dim-line { stroke: #2c3e50; stroke-width: 0.4; fill: none; }
+        .dim-arrow { fill: #2c3e50; stroke: none; }
+        .dim-text { font-size: 5px; fill: #2c3e50; font-family: Arial, sans-serif; font-weight: 600; }
+        .dim-ext { stroke: #2c3e50; stroke-width: 0.3; fill: none; }
         @media print { body { background: #fff; } .svg-wrap { box-shadow: none; } }
     </style>
 </head>
@@ -295,6 +299,79 @@
 
             <line x1="2505" y1="0" x2="2505" y2="1870" stroke="#666" stroke-width="0.5"/>
             <text x="2500" y="935" text-anchor="end" class="label-dim" font-weight="bold" transform="rotate(-90 2500 935)">1870 mm</text>
+
+            <!-- ========== TECHNISCHE BEMASSEUNG: Horizontale Kettenmaße (von links nach rechts, vom Plattenrand) ========== -->
+            <!-- Bemaßungs-Ebene bei y=1880 (unter der Platte) -->
+            <g class="dim-group" stroke="#2c3e50" stroke-width="0.4" fill="none">
+
+                <!-- Reihe 1: Obere Bauteile (y=30-1165) - Bemaßung bei y=1880 -->
+                <!-- Pfeilspitzen-Definition -->
+                <defs>
+                    <marker id="dim-arrow" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+                        <path d="M0,0 L4,2 L0,4 Z" fill="#2c3e50"/>
+                    </marker>
+                    <marker id="dim-arrow-rev" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+                        <path d="M4,0 L0,2 L4,4 Z" fill="#2c3e50"/>
+                    </marker>
+                </defs>
+
+                <!-- Hilfslinie vertikal für Bemaßung -->
+                <line x1="0" y1="1870" x2="0" y2="1890" class="dim-ext"/>
+                <line x1="2520" y1="1870" x2="2520" y2="1890" class="dim-ext"/>
+
+                <!-- Kette 1: Rand (0) → Bauteil 1 Links (30) -->
+                <line x1="0" y1="1880" x2="30" y2="1880" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+                <text x="15" y="1875" text-anchor="middle" class="dim-text">30</text>
+
+                <!-- Bauteil 1 Breite: 30 → 545 (515mm) -->
+                <line x1="30" y1="1880" x2="545" y2="1880" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+                <text x="287" y="1875" text-anchor="middle" class="dim-text">515</text>
+
+                <!-- Lücke: 545 → 625 (80mm Sägeblatt) -->
+                <line x1="545" y1="1880" x2="625" y2="1880" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)" stroke-dasharray="2,2"/>
+                <text x="585" y="1875" text-anchor="middle" class="dim-text" fill="#888">80</text>
+
+                <!-- Bauteil 2: 625 → 1125 (500mm visible + radius, effektiv 515) -->
+                <line x1="625" y1="1880" x2="1125" y2="1880" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+                <text x="875" y="1875" text-anchor="middle" class="dim-text">515</text>
+
+                <!-- Lücke: 1125 → 1205 (80mm) -->
+                <line x1="1125" y1="1880" x2="1205" y2="1880" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)" stroke-dasharray="2,2"/>
+                <text x="1165" y="1875" text-anchor="middle" class="dim-text" fill="#888">80</text>
+
+                <!-- Bauteil 3: 1205 → 1635 (430mm) -->
+                <line x1="1205" y1="1880" x2="1635" y2="1880" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+                <text x="1420" y="1875" text-anchor="middle" class="dim-text">430</text>
+
+                <!-- Lücke: 1635 → 1715 (80mm) -->
+                <line x1="1635" y1="1880" x2="1715" y2="1880" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)" stroke-dasharray="2,2"/>
+                <text x="1675" y="1875" text-anchor="middle" class="dim-text" fill="#888">80</text>
+
+                <!-- Bauteil 4: 1715 → 2285 (570mm) -->
+                <line x1="1715" y1="1880" x2="2285" y2="1880" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+                <text x="2000" y="1875" text-anchor="middle" class="dim-text">570</text>
+
+                <!-- Rest zu Plattenende: 2285 → 2520 (235mm) -->
+                <line x1="2285" y1="1880" x2="2520" y2="1880" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)" stroke-dasharray="2,2"/>
+                <text x="2402" y="1875" text-anchor="middle" class="dim-text" fill="#888">235</text>
+
+                <!-- Summe Bemaßung: 0 → 2520 -->
+                <line x1="0" y1="1895" x2="2520" y2="1895" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)" stroke-width="0.5"/>
+                <text x="1260" y="1890" text-anchor="middle" class="dim-text" font-weight="bold">Gesamt: 2520 mm</text>
+
+                <!-- Reihe 3: Heckklappe (y=1230-1720) - Bemaßung bei y=1910 -->
+                <line x1="0" y1="1905" x2="30" y2="1905" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+                <text x="15" y="1900" text-anchor="middle" class="dim-text">30</text>
+
+                <line x1="30" y1="1905" x2="1440" y2="1905" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+                <text x="735" y="1900" text-anchor="middle" class="dim-text">1410</text>
+
+                <line x1="1440" y1="1905" x2="2520" y2="1905" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)" stroke-dasharray="2,2"/>
+                <text x="1980" y="1900" text-anchor="middle" class="dim-text" fill="#888">1080</text>
+
+                <line x1="0" y1="1920" x2="2520" y2="1920" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)" stroke-width="0.5"/>
+                <text x="1260" y="1915" text-anchor="middle" class="dim-text" font-weight="bold">Heckklappe Gesamt: 2520 mm</text>
+            </g>
 
             <!-- Übersicht: "Verschnitt" Bereich andeuten -->
             <rect x="1660" y="580" width="830" height="1220" fill="#f0f0f0" opacity="0.4" stroke="none"/>

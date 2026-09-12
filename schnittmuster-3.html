@@ -173,16 +173,26 @@
             <circle cx="525" cy="1070" r="15" fill="none" stroke="#1565c0" stroke-width="0.3" stroke-dasharray="1,1"/>
             <circle cx="65" cy="1070" r="15" fill="none" stroke="#1565c0" stroke-width="0.3" stroke-dasharray="1,1"/>
 
+            <!-- Bemaßung Bauteil 1: vertikal (Höhe) bei x=30 (linke Kante) -->
+            <line x1="25" y1="30" x2="25" y2="1085" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="20" y="557" text-anchor="middle" class="dim-text" transform="rotate(-90 20 557)">1070</text>
+            <!-- Bemaßung Bauteil 1: horizontal von Plattenrand (0) zu linker Kante (30) -->
+            <line x1="0" y1="25" x2="30" y2="25" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="15" y="20" text-anchor="middle" class="dim-text">30</text>
+            <!-- Bemaßung Bauteil 1: Breite (30 bis 545) -->
+            <line x1="30" y1="25" x2="545" y2="25" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="287" y="20" text-anchor="middle" class="dim-text">515</text>
+
             <!-- ========== BAUTEIL 2: GEGENÜBER (links Mitte, unter Fenster) ========== -->
-            <!-- x=610, y=30, w=515, h=1135 -->
+            <!-- x=610, y=30, w=515, h=1135; oben R=20, unten R=15 (KORRIGIERT) -->
             <path d="
                 M 630 30
                 L 1105 30
                 Q 1125 30 1125 50
-                L 1125 1145
+                L 1125 1150
                 Q 1125 1165 1105 1165
                 L 645 1165
-                Q 625 1165 625 1145
+                Q 625 1165 625 1150
                 L 625 50
                 Q 625 30 645 30
                 Z
@@ -195,19 +205,31 @@
             <text x="635" y="48" class="label-dim" font-style="italic">R20</text>
             <text x="1108" y="48" class="label-dim" font-style="italic">R20</text>
 
+            <!-- Bemaßung Bauteil 2: vertikal (Höhe) bei linker Kante x=625 -->
+            <line x1="620" y1="30" x2="620" y2="1165" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="615" y="597" text-anchor="middle" class="dim-text" transform="rotate(-90 615 597)">1135</text>
+            <!-- Bemaßung Bauteil 2: horizontal von Plattenrand (0) zu linker Kante (625) -->
+            <line x1="0" y1="120" x2="625" y2="120" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="312" y="115" text-anchor="middle" class="dim-text">625</text>
+            <!-- Bemaßung Bauteil 2: Breite (625 bis 1125) -->
+            <line x1="625" y1="120" x2="1125" y2="120" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="875" y="115" text-anchor="middle" class="dim-text">500</text>
+            <!-- Hinweis: nominal 515, gezeichnet 500 (Radien inkl.) -->
+            <text x="875" y="128" text-anchor="middle" class="dim-text" font-size="4" fill="#888">(nom. 515)</text>
+
             <!-- ========== BAUTEIL 3: C-SÄULE / GURTBREICH (Hinten links Teil 1) ========== -->
-            <!-- x=1190, y=30, w=430, h=520; konische Kanten zur Säule (simulation: leichter inward斜) -->
-            <!-- Gurt-Aussparung: 64×32 mm im oberen Drittel -->
+            <!-- x=1190, y=30, w=430, h=520; konische Kanten zur Säule -->
+            <!-- Oben: R=20 (echte Bögen), unten: R=15; Gurt-Aussparung 64×32 mm im oberen Drittel -->
             <path d="
                 M 1210 30
                 L 1600 30
-                Q 1620 30 1620 50
+                A 20 20 0 0 1 1620 50
                 L 1620 530
-                Q 1620 550 1600 550
+                A 15 15 0 0 1 1600 550
                 L 1220 550
-                Q 1200 550 1200 530
+                A 15 15 0 0 1 1200 530
                 L 1200 50
-                Q 1200 30 1210 30
+                A 20 20 0 0 1 1210 30
                 Z
             " fill="#fff9c4" stroke="#f57f17" stroke-width="1"/>
             <!-- Konische Kanten angedeutet mit leichten Linienschrägen -->
@@ -226,21 +248,37 @@
             <!-- Linie zur Aussparung -->
             <line x1="1410" y1="170" x2="1410" y2="207" stroke="#666" stroke-width="0.2" stroke-dasharray="0.5,0.5"/>
 
+            <!-- Bemaßung Bauteil 3: vertikal (Höhe) bei linker Kante x=1200 -->
+            <line x1="1195" y1="30" x2="1195" y2="550" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="1190" y="290" text-anchor="middle" class="dim-text" transform="rotate(-90 1190 290)">520</text>
+            <!-- Bemaßung Bauteil 3: horizontal von Plattenrand (0) zu linker Kante (1205) -->
+            <line x1="0" y1="210" x2="1205" y2="210" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="602" y="205" text-anchor="middle" class="dim-text">1205</text>
+            <!-- Bemaßung Bauteil 3: Breite (1205 bis 1635) -->
+            <line x1="1205" y1="210" x2="1635" y2="210" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="1420" y="205" text-anchor="middle" class="dim-text">430</text>
+            <!-- Radius-Markierungen -->
+            <text x="1210" y="48" class="label-dim" font-style="italic">R20</text>
+            <text x="1610" y="48" class="label-dim" font-style="italic">R20</text>
+            <text x="1210" y="532" class="label-dim" font-style="italic">R15</text>
+            <text x="1610" y="532" class="label-dim" font-style="italic">R15</text>
+
             <!-- ========== BAUTEIL 4: D-SÄULE / RADKASTEN (Hinten links Teil 2) ========== -->
             <!-- x=1680, y=30, w=570, h=520; unten: progressive Radkasten-Rundung -->
+            <!-- Oben: R=20, unten-links: R=15 (Anschluss an Bauteil 3), unten: progressive Kurve -->
             <path d="
                 M 1700 30
                 L 2230 30
-                Q 2250 30 2250 50
+                A 20 20 0 0 1 2250 50
                 L 2250 430
                 <!-- untere Kante folgt der Radhauswölbung (progressive Kurve) -->
                 C 2250 470 2220 500 2170 510
                 C 2100 520 2050 530 1970 535
                 C 1900 540 1830 540 1770 525
                 L 1700 510
-                Q 1680 505 1680 480
+                A 15 15 0 0 1 1680 495
                 L 1680 50
-                Q 1680 30 1700 30
+                A 20 20 0 0 1 1700 30
                 Z
             " fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
             <text x="1965" y="265" text-anchor="middle" class="label-overlay" font-weight="bold">④ D-Säule / Radkasten</text>
@@ -250,18 +288,32 @@
             <path d="M 1965 470 L 2010 420" fill="none" stroke="#e65100" stroke-width="0.3" stroke-dasharray="1,1"/>
             <text x="2015" y="415" class="label-dim" font-size="4" fill="#e65100">Radkasten-Rundung</text>
 
+            <!-- Bemaßung Bauteil 4: vertikal (Höhe) bei linker Kante x=1700 -->
+            <line x1="1695" y1="30" x2="1695" y2="525" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="1690" y="277" text-anchor="middle" class="dim-text" transform="rotate(-90 1690 277)">520</text>
+            <!-- Bemaßung Bauteil 4: horizontal von Plattenrand (0) zu linker Kante (1715) -->
+            <line x1="0" y1="300" x2="1715" y2="300" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="857" y="295" text-anchor="middle" class="dim-text">1715</text>
+            <!-- Bemaßung Bauteil 4: Breite (1715 bis 2285) -->
+            <line x1="1715" y1="300" x2="2285" y2="300" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="2000" y="295" text-anchor="middle" class="dim-text">570</text>
+            <!-- Radius-Markierungen -->
+            <text x="1710" y="48" class="label-dim" font-style="italic">R20</text>
+            <text x="2240" y="48" class="label-dim" font-style="italic">R20</text>
+            <text x="1690" y="515" class="label-dim" font-style="italic">R15</text>
+
             <!-- ========== BAUTEIL 5: HECKKLAPPE (unter Fenster) ========== -->
-            <!-- x=30, y=1230, w=1410, h=490; untere Ecken R=45, Schloss-Aussparung unten Mitte -->
+            <!-- x=30, y=1230, w=1410, h=490; obere Ecken R=20, untere Ecken R=45, Schloss-Aussparung unten Mitte -->
             <path d="
-                M 75 1230
-                L 1395 1230
-                Q 1440 1230 1440 1275
-                L 1440 1675
-                Q 1440 1720 1395 1720
-                L 75 1720
-                Q 30 1720 30 1675
-                L 30 1275
-                Q 30 1230 75 1230
+                M 50 1230
+                L 1420 1230
+                A 20 20 0 0 1 1440 1250
+                L 1440 1695
+                A 45 45 0 0 1 1395 1740
+                L 50 1740
+                A 45 45 0 0 1 30 1695
+                L 30 1250
+                A 20 20 0 0 1 50 1230
                 Z
             " fill="#e1bee7" stroke="#6a1b9a" stroke-width="1"/>
             <text x="735" y="1450" text-anchor="middle" class="label-overlay" font-weight="bold">⑤ Heckklappe (unter Fenster)</text>
@@ -269,26 +321,36 @@
             <text x="735" y="1478" text-anchor="middle" class="label-dim">kein Fensterausschnitt</text>
 
             <!-- Eckradien-Markierungen -->
-            <text x="38" y="1708" class="label-dim" font-style="italic" font-size="4">R45</text>
-            <text x="1402" y="1708" class="label-dim" font-style="italic" font-size="4">R45</text>
+            <text x="38" y="1728" class="label-dim" font-style="italic" font-size="4">R45</text>
+            <text x="1402" y="1728" class="label-dim" font-style="italic" font-size="4">R45</text>
             <text x="38" y="1248" class="label-dim" font-style="italic">R20</text>
             <text x="1402" y="1248" class="label-dim" font-style="italic">R20</text>
 
             <!-- Schloss-Aussparung unten Mitte (rechteckig mit gerundeten Innenecken) -->
-            <!-- ca. 120 × 60 mm, zentriert bei x=735, unten bei y=1720 -->
+            <!-- ca. 120 × 60 mm, zentriert bei x=735, unten bei y=1740 -->
             <path d="
-                M 685 1690
-                L 785 1690
-                Q 790 1690 790 1695
-                L 790 1710
-                Q 790 1715 785 1715
-                L 685 1715
-                Q 680 1715 680 1710
-                L 680 1695
-                Q 680 1690 685 1690
+                M 685 1710
+                L 785 1710
+                Q 790 1710 790 1715
+                L 790 1730
+                Q 790 1735 785 1735
+                L 685 1735
+                Q 680 1735 680 1730
+                L 680 1715
+                Q 680 1710 685 1710
                 Z
             " fill="white" stroke="#333" stroke-width="0.4" stroke-dasharray="1,1"/>
-            <text x="735" y="1703" text-anchor="middle" class="label-dim" font-size="4">Schloss</text>
+            <text x="735" y="1723" text-anchor="middle" class="label-dim" font-size="4">Schloss</text>
+
+            <!-- Bemaßung Bauteil 5: vertikal (Höhe) bei linker Kante x=30 -->
+            <line x1="25" y1="1230" x2="25" y2="1740" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="20" y="1485" text-anchor="middle" class="dim-text" transform="rotate(-90 20 1485)">490</text>
+            <!-- Bemaßung Bauteil 5: horizontal von Plattenrand (0) zu linker Kante (30) -->
+            <line x1="0" y1="1225" x2="30" y2="1225" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="15" y="1220" text-anchor="middle" class="dim-text">30</text>
+            <!-- Bemaßung Bauteil 5: Breite (30 bis 1440) -->
+            <line x1="30" y1="1225" x2="1440" y2="1225" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="735" y="1220" text-anchor="middle" class="dim-text">1410</text>
 
             <!-- ========== BEZEICHNUNGS-LINIEN ========== -->
             <!-- Maße der Platte -->
@@ -386,12 +448,32 @@
             <text x="1760" y="765" text-anchor="middle" class="label-dim">120 × 280 mm</text>
             <text x="1760" y="778" text-anchor="middle" class="label-dim">Sitzabdeckung unten</text>
 
+            <!-- Bemaßung ⑥: von Plattenrand (0) zu linker Kante (1700) -->
+            <line x1="0" y1="610" x2="1700" y2="610" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="850" y="605" text-anchor="middle" class="dim-text">1700</text>
+            <!-- Bemaßung ⑥: Breite (120) -->
+            <line x1="1700" y1="610" x2="1820" y2="610" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="1760" y="605" text-anchor="middle" class="dim-text">120</text>
+            <!-- Bemaßung ⑥: Höhe (280) -->
+            <line x1="1695" y1="620" x2="1695" y2="900" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="1690" y="760" text-anchor="middle" class="dim-text" transform="rotate(-90 1690 760)">280</text>
+
             <!-- ⑦ Sitzabdeckung Beifahrer (12×28 cm = 120×280 mm) -->
             <!-- direkt daneben: x=1850, y=620 -->
             <rect x="1850" y="620" width="120" height="280" rx="5" ry="5" fill="#ffccbc" stroke="#bf360c" stroke-width="1"/>
             <text x="1910" y="750" text-anchor="middle" class="label-overlay" font-weight="bold">⑦ Beifahrersitz</text>
             <text x="1910" y="765" text-anchor="middle" class="label-dim">120 × 280 mm</text>
             <text x="1910" y="778" text-anchor="middle" class="label-dim">Sitzabdeckung unten</text>
+
+            <!-- Bemaßung ⑦: von Plattenrand (0) zu linker Kante (1850) -->
+            <line x1="0" y1="910" x2="1850" y2="910" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="925" y="905" text-anchor="middle" class="dim-text">1850</text>
+            <!-- Bemaßung ⑦: Breite (120) -->
+            <line x1="1850" y1="910" x2="1970" y2="910" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="1910" y="905" text-anchor="middle" class="dim-text">120</text>
+            <!-- Bemaßung ⑦: Höhe (280) -->
+            <line x1="1965" y1="620" x2="1965" y2="900" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="1960" y="760" text-anchor="middle" class="dim-text" transform="rotate(-90 1960 760)">280</text>
 
             <!-- ⑧ Armatur-Abdeckung 1 (18×36 cm = 180×360 mm) -->
             <!-- darunter: x=1700, y=950 -->
@@ -400,12 +482,32 @@
             <text x="1790" y="1135" text-anchor="middle" class="label-dim">180 × 360 mm</text>
             <text x="1790" y="1148" text-anchor="middle" class="label-dim">Abdeckung oben</text>
 
+            <!-- Bemaßung ⑧: von Plattenrand (0) zu linker Kante (1700) -->
+            <line x1="0" y1="1310" x2="1700" y2="1310" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="850" y="1305" text-anchor="middle" class="dim-text">1700</text>
+            <!-- Bemaßung ⑧: Breite (180) -->
+            <line x1="1700" y1="1310" x2="1880" y2="1310" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="1790" y="1305" text-anchor="middle" class="dim-text">180</text>
+            <!-- Bemaßung ⑧: Höhe (360) -->
+            <line x1="1695" y1="950" x2="1695" y2="1310" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="1690" y="1130" text-anchor="middle" class="dim-text" transform="rotate(-90 1690 1130)">360</text>
+
             <!-- ⑨ Armatur-Abdeckung 2 (18×36 cm = 180×360 mm) -->
             <!-- daneben: x=1920, y=950 -->
             <rect x="1920" y="950" width="180" height="360" rx="5" ry="5" fill="#b2dfdb" stroke="#00695c" stroke-width="1"/>
             <text x="2010" y="1120" text-anchor="middle" class="label-overlay" font-weight="bold">⑨ Armatur 2</text>
             <text x="2010" y="1135" text-anchor="middle" class="label-dim">180 × 360 mm</text>
             <text x="2010" y="1148" text-anchor="middle" class="label-dim">Abdeckung oben</text>
+
+            <!-- Bemaßung ⑨: von Plattenrand (0) zu linker Kante (1920) -->
+            <line x1="0" y1="1340" x2="1920" y2="1340" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="960" y="1335" text-anchor="middle" class="dim-text">1920</text>
+            <!-- Bemaßung ⑨: Breite (180) -->
+            <line x1="1920" y1="1340" x2="2100" y2="1340" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="2010" y="1335" text-anchor="middle" class="dim-text">180</text>
+            <!-- Bemaßung ⑨: Höhe (360) -->
+            <line x1="2115" y1="950" x2="2115" y2="1310" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
+            <text x="2120" y="1130" text-anchor="middle" class="dim-text" transform="rotate(-90 2120 1130)">360</text>
 
         </svg>
     </div>

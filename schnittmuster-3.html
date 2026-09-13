@@ -22,12 +22,12 @@
         .legend-item { display: flex; align-items: center; gap: 6px; }
         .legend-color { width: 16px; height: 16px; border-radius: 3px; border: 1px solid #999; }
         .note { font-size: 0.85em; color: #777; margin-top: 15px; line-height: 1.5; }
-        .label-overlay { font-size: 7px; fill: #333; font-family: Arial, sans-serif; }
-        .label-dim { font-size: 6px; fill: #666; font-family: Arial, sans-serif; }
-        .dim-line { stroke: #2c3e50; stroke-width: 0.4; fill: none; }
+        .label-overlay { font-size: 13px; fill: #333; font-family: Arial, sans-serif; font-weight: 600; }
+        .label-dim { font-size: 11px; fill: #555; font-family: Arial, sans-serif; }
+        .dim-line { stroke: #2c3e50; stroke-width: 1.2; fill: none; }
         .dim-arrow { fill: #2c3e50; stroke: none; }
-        .dim-text { font-size: 5px; fill: #2c3e50; font-family: Arial, sans-serif; font-weight: 600; }
-        .dim-ext { stroke: #2c3e50; stroke-width: 0.3; fill: none; }
+        .dim-text { font-size: 11px; fill: #2c3e50; font-family: Arial, sans-serif; font-weight: 600; }
+        .dim-ext { stroke: #2c3e50; stroke-width: 0.8; fill: none; }
         @media print { body { background: #fff; } .svg-wrap { box-shadow: none; } }
     </style>
 </head>
@@ -126,11 +126,11 @@
         <svg width="1008" height="748" viewBox="0 0 2520 1870" xmlns="http://www.w3.org/2000/svg" style="border:1px solid #ccc;">
 
             <!-- ========== PLATTE ========== -->
-            <rect x="0" y="0" width="2520" height="1870" fill="#fafafa" stroke="#333" stroke-width="2"/>
+            <rect x="0" y="0" width="2520" height="1870" fill="#fafafa" stroke="#333" stroke-width="3"/>
             <text x="2510" y="1860" text-anchor="end" class="label-dim">2520 × 1870 mm — Sperrholz Pappel 4mm IF 20</text>
 
             <!-- Hilfslinien (Raster alle 500mm) -->
-            <g stroke="#eee" stroke-width="0.3">
+            <g stroke="#ddd" stroke-width="0.5">
                 <line x1="0" y1="500" x2="2520" y2="500"/>
                 <line x1="0" y1="1000" x2="2520" y2="1000"/>
                 <line x1="0" y1="1500" x2="2520" y2="1500"/>
@@ -160,7 +160,7 @@
                 L 45 50
                 A 20 20 0 0 1 65 30
                 Z
-            " fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+            " fill="#bbdefb" stroke="#1565c0" stroke-width="2"/>
             <text x="295" y="530" text-anchor="middle" class="label-overlay" font-weight="bold">① Schiebetür (rechts)</text>
             <text x="295" y="545" text-anchor="middle" class="label-dim">515 × 1070 mm</text>
             <text x="295" y="558" text-anchor="middle" class="label-dim">unten unter Fenster</text>
@@ -170,8 +170,8 @@
             <text x="55" y="48" class="label-dim" font-style="italic">R20</text>
             <text x="528" y="48" class="label-dim" font-style="italic">R20</text>
             <!-- Visuelle Hervorhebung der unteren Rundungen -->
-            <circle cx="525" cy="1070" r="15" fill="none" stroke="#1565c0" stroke-width="0.3" stroke-dasharray="1,1"/>
-            <circle cx="65" cy="1070" r="15" fill="none" stroke="#1565c0" stroke-width="0.3" stroke-dasharray="1,1"/>
+            <circle cx="525" cy="1070" r="15" fill="none" stroke="#1565c0" stroke-width="1" stroke-dasharray="2,2"/>
+            <circle cx="65" cy="1070" r="15" fill="none" stroke="#1565c0" stroke-width="1" stroke-dasharray="2,2"/>
 
             <!-- Bemaßung Bauteil 1: vertikal (Höhe) bei x=30 (linke Kante) -->
             <line x1="25" y1="30" x2="25" y2="1085" class="dim-line" marker-start="url(#dim-arrow-rev)" marker-end="url(#dim-arrow)"/>
@@ -196,7 +196,7 @@
                 L 625 50
                 Q 625 30 645 30
                 Z
-            " fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+            " fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
             <text x="875" y="580" text-anchor="middle" class="label-overlay" font-weight="bold">② Gegenüber Schiebetür</text>
             <text x="875" y="595" text-anchor="middle" class="label-dim">515 × 1135 mm</text>
             <text x="875" y="608" text-anchor="middle" class="label-dim">links Mitte, unter Fenster</text>
@@ -231,7 +231,7 @@
                 L 1200 50
                 A 20 20 0 0 1 1210 30
                 Z
-            " fill="#fff9c4" stroke="#f57f17" stroke-width="1"/>
+            " fill="#fff9c4" stroke="#f57f17" stroke-width="2"/>
             <!-- Konische Kanten angedeutet mit leichten Linienschrägen -->
             <path d="
                 M 1200 40
@@ -280,7 +280,7 @@
                 L 1680 50
                 A 20 20 0 0 1 1700 30
                 Z
-            " fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+            " fill="#ffe0b2" stroke="#e65100" stroke-width="2"/>
             <text x="1965" y="265" text-anchor="middle" class="label-overlay" font-weight="bold">④ D-Säule / Radkasten</text>
             <text x="1965" y="280" text-anchor="middle" class="label-dim">570 × 520 mm</text>
             <text x="1965" y="293" text-anchor="middle" class="label-dim">unten: progressive Rundung</text>
@@ -315,7 +315,7 @@
                 L 30 1250
                 A 20 20 0 0 1 50 1230
                 Z
-            " fill="#e1bee7" stroke="#6a1b9a" stroke-width="1"/>
+            " fill="#e1bee7" stroke="#6a1b9a" stroke-width="2"/>
             <text x="735" y="1450" text-anchor="middle" class="label-overlay" font-weight="bold">⑤ Heckklappe (unter Fenster)</text>
             <text x="735" y="1465" text-anchor="middle" class="label-dim">1410 × 490 mm</text>
             <text x="735" y="1478" text-anchor="middle" class="label-dim">kein Fensterausschnitt</text>
@@ -443,7 +443,7 @@
 
             <!-- ⑥ Sitzabdeckung Fahrer (12×28 cm = 120×280 mm) -->
             <!-- Freifläche beginnt bei x=1660, y=580. Platziert bei x=1700, y=620 -->
-            <rect x="1700" y="620" width="120" height="280" rx="5" ry="5" fill="#ffccbc" stroke="#bf360c" stroke-width="1"/>
+            <rect x="1700" y="620" width="120" height="280" rx="5" ry="5" fill="#ffccbc" stroke="#bf360c" stroke-width="2"/>
             <text x="1760" y="750" text-anchor="middle" class="label-overlay" font-weight="bold">⑥ Fahrersitz</text>
             <text x="1760" y="765" text-anchor="middle" class="label-dim">120 × 280 mm</text>
             <text x="1760" y="778" text-anchor="middle" class="label-dim">Sitzabdeckung unten</text>
@@ -460,7 +460,7 @@
 
             <!-- ⑦ Sitzabdeckung Beifahrer (12×28 cm = 120×280 mm) -->
             <!-- direkt daneben: x=1850, y=620 -->
-            <rect x="1850" y="620" width="120" height="280" rx="5" ry="5" fill="#ffccbc" stroke="#bf360c" stroke-width="1"/>
+            <rect x="1850" y="620" width="120" height="280" rx="5" ry="5" fill="#ffccbc" stroke="#bf360c" stroke-width="2"/>
             <text x="1910" y="750" text-anchor="middle" class="label-overlay" font-weight="bold">⑦ Beifahrersitz</text>
             <text x="1910" y="765" text-anchor="middle" class="label-dim">120 × 280 mm</text>
             <text x="1910" y="778" text-anchor="middle" class="label-dim">Sitzabdeckung unten</text>
@@ -477,7 +477,7 @@
 
             <!-- ⑧ Armatur-Abdeckung 1 (18×36 cm = 180×360 mm) -->
             <!-- darunter: x=1700, y=950 -->
-            <rect x="1700" y="950" width="180" height="360" rx="5" ry="5" fill="#b2dfdb" stroke="#00695c" stroke-width="1"/>
+            <rect x="1700" y="950" width="180" height="360" rx="5" ry="5" fill="#b2dfdb" stroke="#00695c" stroke-width="2"/>
             <text x="1790" y="1120" text-anchor="middle" class="label-overlay" font-weight="bold">⑧ Armatur 1</text>
             <text x="1790" y="1135" text-anchor="middle" class="label-dim">180 × 360 mm</text>
             <text x="1790" y="1148" text-anchor="middle" class="label-dim">Abdeckung oben</text>
@@ -494,7 +494,7 @@
 
             <!-- ⑨ Armatur-Abdeckung 2 (18×36 cm = 180×360 mm) -->
             <!-- daneben: x=1920, y=950 -->
-            <rect x="1920" y="950" width="180" height="360" rx="5" ry="5" fill="#b2dfdb" stroke="#00695c" stroke-width="1"/>
+            <rect x="1920" y="950" width="180" height="360" rx="5" ry="5" fill="#b2dfdb" stroke="#00695c" stroke-width="2"/>
             <text x="2010" y="1120" text-anchor="middle" class="label-overlay" font-weight="bold">⑨ Armatur 2</text>
             <text x="2010" y="1135" text-anchor="middle" class="label-dim">180 × 360 mm</text>
             <text x="2010" y="1148" text-anchor="middle" class="label-dim">Abdeckung oben</text>
